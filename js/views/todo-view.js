@@ -50,9 +50,6 @@ var app = app || {};
 
 			this.$el.html(this.template(this.model.toJSON()));
 			this.$el.toggleClass('completed', this.model.get('completed'));
-			if(this.model.get('completed')){
-			  this.$el.find('label').text( this.$el.find('label').text() + ' --done' );
-			}
 			this.toggleVisible();
 			this.$input = this.$('.edit');
 			return this;
